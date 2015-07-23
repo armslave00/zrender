@@ -41,8 +41,9 @@ define(
                           || event.relatedTarget
                           || event.srcElement
                           || event.target;
-
-            return target && target.getAttribute("class").match(config.elementClassName)
+            
+            var className = target && target.getAttribute("class");
+            return className && className.match(config.elementClassName);
         };
 
         var domHandlers = {
